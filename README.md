@@ -6,7 +6,7 @@ A multi-agent system (MAS) simulation where six AI agents — each modeled after
 
 ## 🎯 Live Dashboard
 
-> **[View Live Dashboard →](https://snigdhathakkar.github.io/hedge-fund-mas/)**
+> **[View Live Dashboard →](https://pallavikochar.github.io/hedge-fund-mas/)**
 
 ## 🏗️ Architecture
 
@@ -32,7 +32,7 @@ A multi-agent system (MAS) simulation where six AI agents — each modeled after
 
 ```bash
 # Clone the repo
-git clone https://github.com/snigdhathakkar/hedge-fund-mas.git
+git clone https://github.com/pallavikochar/hedge-fund-mas.git
 cd hedge-fund-mas
 
 # Serve locally (any static file server works)
