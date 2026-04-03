@@ -8,8 +8,7 @@ __pycache__/
 Thumbs.db
 
 # Temp / generated
-convert_to_pdf.py
-final_pod_assignment.html
+# Files moved to repo tracking
 
 # IDE
 .vscode/
