@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Part B: Performance Projection — April 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #c9d1d9;
+    --bright: #f0f6fc;
+    --muted: #6e7681;
+    --green: #00e676;
+    --blue: #448aff;
+    --red: #ff5252;
+    --purple: #e040fb;
+    --yellow: #ffd740;
+    --orange: #ff9100;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 40px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  @media print {
+    body { background: #fff; color: #1a1a2e; padding: 20px 40px; }
+    h1, h2, h3, h4 { color: #1a1a2e !important; }
+    table { border-color: #ccc !important; }
+    th { background: #f0f0f5 !important; color: #1a1a2e !important; }
+    td { color: #333 !important; border-color: #ddd !important; }
+    .alert { background: #f8f9fa !important; border-color: #ccc !important; }
+    hr { border-color: #ccc !important; }
+    strong { color: #1a1a2e !important; }
+  }
+
+  h1 { font-size: 28px; font-weight: 900; color: var(--bright); margin: 48px 0 8px; letter-spacing: -0.5px; }
+  h2 { font-size: 20px; font-weight: 800; color: var(--bright); margin: 36px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  h3 { font-size: 16px; font-weight: 700; color: var(--bright); margin: 24px 0 8px; }
+  p { margin: 8px 0; font-size: 13px; }
+  hr { border: none; border-top: 2px solid var(--border); margin: 32px 0; }
+  strong { color: var(--bright); }
+  
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 12px; }
+  th, td { padding: 10px 12px; text-align: left; border: 1px solid var(--border); }
+  th { background: var(--card); color: var(--bright); font-weight: 700; font-size: 11px; text-transform: uppercase; }
+  tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+
+  .alert { border-left: 4px solid var(--blue); background: rgba(68, 138, 255, 0.05); padding: 12px 16px; margin: 16px 0; border-radius: 4px; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<div style="text-align: center; padding-top: 20vh; min-height: 85vh;">
+  <h1 style="font-size: 38px; font-weight: 800; color: var(--bright); margin-bottom: 8px; border: none;">Part B: Performance Projection</h1>
+  <p style="font-size: 18px; font-weight: 600; color: var(--text); margin-bottom: 40px;">Multi-Agent Hedge Fund Simulation</p>
+  
+  <hr style="border: none; border-top: 1px solid var(--border); width: 60%; margin: 0 auto 30px auto;" />
+  
+  <p style="font-size: 15px; color: var(--text); margin-bottom: 8px;">FIN580 -- Quantitative Finance</p>
+  <p style="font-size: 15px; color: var(--text); margin-bottom: 40px;">Post-Crisis 30-Day Outlook -- April 2, 2026</p>
+  
+  <div style="margin-top: 100px;">
+    <p style="font-size: 14px; color: var(--text);">
+      <strong>Dashboard:</strong> <a href="https://pallavikochar.github.io/hedge-fund-mas/" style="color: var(--blue); text-decoration: underline;">https://pallavikochar.github.io/hedge-fund-mas/</a>
+    </p>
+  </div>
+  <div style="page-break-after: always;"></div>
+</div>
+
+<h2>B.1 — Projected 30-Day Multi-Agent Portfolios</h2>
+<p>Each fund agent has adjusted their target allocation based on the $120/bbl Oil Shock and 5.2% Yield regime shift. Below are the high-conviction adjustments and target weights for the next 30 days.</p>
+
+<h3>🟢 Tiger Global — High Beta Recovery Stance</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Security / Derivative</th>
+      <th>Previous Weight</th>
+      <th>Target Weight (30-Day)</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>NVDA</strong> (Nvidia)</td><td>5.4%</td><td>5.1%</td><td>Established 105P/140C Collar; protected downside while maintaining long-term exposure.</td></tr>
+    <tr><td><strong>GOOGL</strong> (Alphabet)</td><td>11.2%</td><td>11.2%</td><td>Hold. Focus on FCF resilience and AI operational efficiency.</td></tr>
+    <tr><td><strong>AMZN</strong> (Amazon)</td><td>7.8%</td><td>7.5%</td><td>Minor trim; reallocating to buy SPX 5400 Puts as portfolio overlay.</td></tr>
+    <tr><td><strong>SE</strong> (Sea Ltd)</td><td>4.2%</td><td>3.6%</td><td>Aggressive trim (-15%); reducing duration risk in emerging market tech.</td></tr>
+  </tbody>
+</table>
+
+<h3>🔵 Bridgewater — Macro Regime Alpha</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Security / Derivative</th>
+      <th>Previous Weight</th>
+      <th>Target Weight (30-Day)</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>GLD</strong> (Gold ETF)</td><td>2.1%</td><td>5.1%</td><td>Large build (+300bp). Strategic hedge against stagflationary shock.</td></tr>
+    <tr><td><strong>TIPS</strong> (Inflation Protected)</td><td>1.4%</td><td>4.8%</td><td>Aggressive accumulation. Core play on underpriced inflation expectations.</td></tr>
+    <tr><td><strong>XOM/CVX</strong> (Energy)</td><td>0.0%</td><td>2.5%</td><td>Initiation. FCF expansion at $120 oil exceeds market discount rates.</td></tr>
+    <tr><td><strong>TLT</strong> (Long Bonds)</td><td>4.2%</td><td>-2.0%</td><td>Aggressive Put overlay; structural short position at 5.2% yields.</td></tr>
+  </tbody>
+</table>
+
+<h3>🔴 Elliott Management — Activist Advantage</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Security / Derivative</th>
+      <th>Previous Weight</th>
+      <th>Target Weight (30-Day)</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>PSX</strong> (Phillips 66)</td><td>11.0%</td><td>12.5%</td><td>Aggressive buy. Forcing special dividend and operational spin-offs.</td></tr>
+    <tr><td><strong>LUV</strong> (Southwest)</td><td>9.4%</td><td>11.4%</td><td>Board restructuring play. Using crisis volatility to increase pressure on management.</td></tr>
+    <tr><td><strong>DAL</strong> (Delta Air Lines)</td><td>0.0%</td><td>2.0%</td><td>Opportunistic entry at $34. Long-term turnaround activist thesis.</td></tr>
+  </tbody>
+</table>
+
+<h3>🟣 Renaissance Tech — Statistical Arbitrage (Medallion)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Metrics</th>
+      <th>Status</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Net Beta</strong></td><td>0.05</td><td>Manual override to ±0.5% net exposure during Level 3 Regime transition.</td></tr>
+    <tr><td><strong>Holding Period</strong></td><td>3.5 Days</td><td>Accelerating turnover to scalp mean-reversion in mid-cap industrial names.</td></tr>
+    <tr><td><strong>Key Trades</strong></td><td>47 Clusters</td><td>Simultaneous statistical scalps at 3.2σ-5.0σ dislocations.</td></tr>
+  </tbody>
+</table>
+
+<h3>🟡 Millennium — Multi-Strategy Neutrality</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Strategy Cluster</th>
+      <th>Allocation</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Equity Market Neutral</strong></td><td>$180B Gross</td><td>Tightening pod kill-switches. Index overlays ($8B) offset beta.</td></tr>
+    <tr><td><strong>Fixed Income Arb</strong></td><td>$42B Gross</td><td>2Y/10Y steepener play ($2.3B notional); profiting from yield curve volatility.</td></tr>
+    <tr><td><strong>Volatility Arb</strong></td><td>$12B Gross</td><td>VIX calendar spreads; profiting from backwardation exit.</td></tr>
+  </tbody>
+</table>
+
+<h3>🟠 Oaktree Capital — Distressed Quality</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Asset Class</th>
+      <th>Target Weight</th>
+      <th>Action / Reasoning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Distressed Energy Debt</strong></td><td>12.0%</td><td>Buying senior secured at 65-70¢. Yield-to-recovery > 22%.</td></tr>
+    <tr><td><strong>CLO Tranches (BB)</strong></td><td>8.5%</td><td>Bid at 85¢. Information edge: forced-seller liquidity gap vs. stable underlying.</td></tr>
+    <tr><td><strong>EXE / TRMD</strong> (Holdings)</td><td>15.5%</td><td>Hold strong. Operational yields increasing at 5.2% macro environment.</td></tr>
+  </tbody>
+</table>
+
+<div style="page-break-after: always;"></div>
+
+<h2>B.2 — Fidelity Scorecard & Logic Evaluation</h2>
+<div class="alert">
+  <strong>Definition of Fidelity:</strong> Measures the alignment between the AI agent's strategy and the real-world historical patterns, investor letters, and documented frameworks (e.g., Dalio's "Economic Principles", Marks' "Memos").
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent</th>
+      <th>Fidelity Score</th>
+      <th>Grade</th>
+      <th>Justification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Oaktree</strong> (Marks)</td>
+      <td><strong>94</strong></td>
+      <td>A+</td>
+      <td>"Vintage of the decade" rhetoric and dry-powder deployment match almost exactly with Howard Marks' known counter-cyclical playbook.</td>
+    </tr>
+    <tr>
+      <td><strong>Bridgewater</strong> (Dalio)</td>
+      <td><strong>91</strong></td>
+      <td>A+</td>
+      <td>Alignment with the "Changing World Order" thesis and aggressive use of TIPS/Gold as historical stagflation hedges.</td>
+    </tr>
+    <tr>
+      <td><strong>Millennium</strong> (Englander)</td>
+      <td><strong>89</strong></td>
+      <td>A</td>
+      <td>Strict adherence to pod kill-switches and capital neutrality. The use of index overlays matches Millennium's record 2022 risk-management.</td>
+    </tr>
+    <tr>
+      <td><strong>Elliott</strong> (Singer)</td>
+      <td><strong>87</strong></td>
+      <td>A</td>
+      <td>Adversarial rhetoric and focus on operational catalysts (PSX/LUV). Singer is known for aggressive proxy letters during market stress.</td>
+    </tr>
+    <tr>
+      <td><strong>Tiger Global</strong> (Coleman)</td>
+      <td><strong>82</strong></td>
+      <td>A-</td>
+      <td>Accurate 13F holdings but slightly understates historical willingness to liquidate high-growth tech once drawdowns exceed -30%.</td>
+    </tr>
+    <tr>
+      <td><strong>RenTech</strong> (Simons†/Brown)</td>
+      <td><strong>78</strong></td>
+      <td>B+</td>
+      <td>Regime detection logic is sound, but inherent secrecy of the fund makes 100% fidelity impossible for any external simulation model.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p style="text-align: center; color: var(--muted); font-size: 11px;">
+  <strong>END OF PART B: PERFORMANCE PROJECTION</strong><br>
+  Generated by Nexus Capital Multi-Agent System | April 2026 | FIN 580 Project Submission
+</p>
+
+</body>
+</html>
