@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp / generated
+convert_to_pdf.py
+final_pod_assignment.html
+
+# IDE
+.vscode/
+.idea/

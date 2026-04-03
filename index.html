@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Capital | Multi-Agent Hedge Fund Command Center</title>
+    <meta name="description" content="A multi-agent system simulating six distinct hedge fund archetypes operating in real-time.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="mirror-pod.css">
+    <link rel="stylesheet" href="agentic-13f.css">
+    <link rel="stylesheet" href="radar-chart.css">
+    <link rel="stylesheet" href="evaluation.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-bg">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+    </div>
+
+    <!-- Top Navigation Bar -->
+    <nav id="top-nav">
+        <div class="nav-left">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M16 2L30 9V23L16 30L2 23V9L16 2Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <path d="M16 2L16 30" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        <path d="M2 9L30 23" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        <path d="M30 9L2 23" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                        <circle cx="16" cy="16" r="3" fill="currentColor" opacity="0.8"/>
+                    </svg>
+                </div>
+                <span class="logo-text">NEXUS</span>
+                <span class="logo-tag">CAPITAL</span>
+            </div>
+        </div>
+        <div class="nav-center">
+            <div class="market-ticker" id="market-ticker"></div>
+        </div>
+        <div class="nav-right">
+            <div class="system-status">
+                <div class="status-dot pulse"></div>
+                <span>SYSTEM LIVE</span>
+            </div>
+            <div class="nav-clock" id="nav-clock"></div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Section: Portfolio Overview -->
+        <section class="section-header" id="overview-section">
+            <div class="section-title-row">
+                <h1>Multi-Agent Command Center</h1>
+                <p class="section-subtitle">Six autonomous agents. Six strategies. One unified portfolio.</p>
+            </div>
+            <div class="kpi-strip" id="kpi-strip">
+                <div class="kpi-card">
+                    <span class="kpi-label">TOTAL AUM</span>
+                    <span class="kpi-value" id="kpi-aum">$12.4B</span>
+                    <span class="kpi-change positive">+2.3%</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">YTD RETURN</span>
+                    <span class="kpi-value" id="kpi-ytd">+18.7%</span>
+                    <span class="kpi-change positive">vs S&P +12.1%</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">SHARPE RATIO</span>
+                    <span class="kpi-value" id="kpi-sharpe">2.41</span>
+                    <span class="kpi-change neutral">Rolling 12M</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">MAX DRAWDOWN</span>
+                    <span class="kpi-value" id="kpi-drawdown">-4.2%</span>
+                    <span class="kpi-change positive">Within target</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">ACTIVE POSITIONS</span>
+                    <span class="kpi-value" id="kpi-positions">247</span>
+                    <span class="kpi-change neutral">Across 6 agents</span>
+                </div>
+                <div class="kpi-card">
+                    <span class="kpi-label">RISK UTILIZATION</span>
+                    <span class="kpi-value" id="kpi-risk">73%</span>
+                    <div class="risk-bar"><div class="risk-fill" style="width: 73%"></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Agent Grid -->
+        <section class="agents-section" id="agents-section">
+            <div class="section-label">
+                <span class="label-icon">◆</span>
+                <span>ACTIVE AGENTS</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="agents-grid" id="agents-grid">
+                <!-- Agent cards will be injected by JS -->
+            </div>
+        </section>
+
+        <!-- Section: Live Feed & Consensus -->
+        <section class="feed-section" id="feed-section">
+            <div class="feed-columns">
+                <!-- Agent Activity Feed -->
+                <div class="feed-panel">
+                    <div class="panel-header">
+                        <h2>Agent Activity Feed</h2>
+                        <div class="panel-badge live-badge">
+                            <div class="live-dot"></div>
+                            LIVE
+                        </div>
+                    </div>
+                    <div class="feed-list" id="activity-feed">
+                        <!-- Feed items injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Consensus View -->
+                <div class="consensus-panel">
+                    <div class="panel-header">
+                        <h2>Agent Consensus Matrix</h2>
+                        <div class="panel-badge">REAL-TIME</div>
+                    </div>
+                    <div class="consensus-grid" id="consensus-grid">
+                        <!-- Consensus rows injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Performance Chart -->
+        <section class="chart-section" id="chart-section">
+            <div class="section-label">
+                <span class="label-icon">◆</span>
+                <span>CUMULATIVE PERFORMANCE</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-legend" id="chart-legend"></div>
+                <canvas id="performance-canvas" width="1200" height="400"></canvas>
+            </div>
+        </section>
+
+        <!-- Section: Correlation Matrix -->
+        <section class="correlation-section" id="correlation-section">
+            <div class="section-label">
+                <span class="label-icon">◆</span>
+                <span>INTER-AGENT CORRELATION</span>
+                <div class="label-line"></div>
+            </div>
+            <div class="correlation-container" id="correlation-container">
+                <!-- Correlation heatmap injected by JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Agent Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content" id="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="mirror-pod.js"></script>
+    <script src="agentic-13f.js"></script>
+    <script src="radar-chart.js"></script>
+    <script src="evaluation.js"></script>
+</body>
+</html>
